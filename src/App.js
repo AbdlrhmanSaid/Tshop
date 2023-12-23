@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { AppNavbar } from "./components/AppNavbar";
+import MainHome from "./components/MainHome";
+import Container from "react-bootstrap/Container";
+import Footer from "./components/Footer";
+import { Routes, Route } from "react-router";
+import Profile from "./components/Profile";
+import SettingsPage from "./components/Settings";
+import SignUp from "./components/SignUp";
+import Contact from "./components/Contact";
+import Viewprod from "./components/Viewprod";
+import Orders from "./components/Orders";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <AppNavbar />
+      <Container className="h-100 overflow-auto">
+        <Routes>
+          <Route path="/" element={<MainHome />} />
+          <Route path="/Profile" element={<Profile />} />
+          <Route path="/Settings" element={<SettingsPage />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/Product/:productId" element={<Viewprod />} />
+        </Routes>
+      </Container>
+      <Footer />
+    </>
   );
 }
 
