@@ -115,10 +115,21 @@ footer {
   display: flex;
   align-items: center;
 }
-.btns{
+.btns {
   background: #0d6efd;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 10px;
+}
+.categoryName {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+.btn-tabs {
+  border: none;
+  justify-content: center;
 }

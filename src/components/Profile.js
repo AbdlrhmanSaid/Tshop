@@ -1,5 +1,3 @@
-// في ملف Profile.js
-
 import React from "react";
 import { useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +7,7 @@ import {
   faBirthdayCake,
   faEdit,
   faPhone,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { selectUserData } from "../rtk/slices/userSlice";
@@ -48,6 +47,10 @@ const Profile = () => {
             <li className="list-group-item">
               <FontAwesomeIcon icon={faPhone} className="me-2" />
               <strong>Phone:</strong> {userData.phone}
+            </li>
+            <li className="list-group-item">
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+              <strong>email:</strong> {userData.email}
             </li>
           </ul>
           <Link

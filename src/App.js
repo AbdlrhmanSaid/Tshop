@@ -10,6 +10,8 @@ import SignUp from "./components/SignUp";
 import Contact from "./components/Contact";
 import Viewprod from "./components/Viewprod";
 import Orders from "./components/Orders";
+import FirstPage from "./components/FirstPage";
+// import LoginPage from "./components/LoginPage";
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
       <AppNavbar />
       <Container className="h-100 overflow-auto">
         <Routes>
-          <Route path="/" element={<MainHome />} />
+          {/* <Route path="/Sign" element={<LoginPage />} /> */}
+          <Route path="/" element={<FirstPage />} />
+          <Route path="/Prducts" element={<MainHome />} />
           <Route path="/Profile" element={<Profile />} />
           <Route path="/Settings" element={<SettingsPage />} />
           <Route path="/SignUp" element={<SignUp />} />

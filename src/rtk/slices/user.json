@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "JohnDoe",
+      "email": "example@gmail.com",
+      "address": {
+        "city": "Alexandria",
+        "twon": "Gleem",
+        "details": "123 Main St"
+      },
+      "password": "1234",
+      "age": "25",
+      "phone": "0123456789"
+    }
+  ]
+}

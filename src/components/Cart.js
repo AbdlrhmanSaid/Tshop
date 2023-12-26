@@ -78,7 +78,7 @@ export const Cart = () => {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow} className="cart-icon">
+      <Button variant="primary" onClick={handleShow} className="z-3 cart-icon">
         <FontAwesomeIcon icon={faCartShopping} />
         <span className="total-length w-25 h-25 "> {cart.length}</span>
       </Button>

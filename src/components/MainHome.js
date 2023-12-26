@@ -114,12 +114,13 @@ function MainHome() {
                         index === currentImageIndex ? "active" : ""
                       }`}
                     >
-                      <Image
-                        src={product.image}
-                        className="d-block w-100"
-                        alt={`Slide ${index + 1}`}
-                        style={{ maxWidth: "100%", height: "auto" }}
-                      />
+                      <Card className="text-center">
+                        <Card.Img
+                          variant="top"
+                          src={product.image}
+                          alt={`Slide ${index + 1}`}
+                        />
+                      </Card>
                     </div>
                   ))}
                 </div>
@@ -188,3 +189,65 @@ function MainHome() {
 }
 
 export default MainHome;
+// <Row className="justify-content-center">
+//     <Col xs={12} md={8}>
+//       <div id="carouselExampleIndicators" className="carousel slide">
+//         <div className="carousel-indicators">
+//           {filteredProducts.map((product, index) => (
+//             <button
+//               key={index}
+//               type="button"
+//               data-bs-target="#carouselExampleIndicators"
+//               data-bs-slide-to={index}
+//               className={index === currentImageIndex ? "active" : ""}
+//               aria-current={index === currentImageIndex ? "true" : ""}
+//               aria-label={`Slide ${index + 1}`}
+//             ></button>
+//           ))}
+//         </div>
+//         <div className="carousel-inner">
+//           {filteredProducts.map((product, index) => (
+//             <div
+//               key={index}
+//               className={`carousel-item ${
+//                 index === currentImageIndex ? "active" : ""
+//               }`}
+//             >
+//               <Image
+//                 src={product.image}
+//                 className="d-block w-100"
+//                 alt={`Slide ${index + 1}`}
+//                 style={{ maxWidth: "100%", height: "auto" }}
+//               />
+//             </div>
+//           ))}
+//         </div>
+//         <button
+//           className="carousel-control-prev"
+//           type="button"
+//           data-bs-target="#carouselExampleIndicators"
+//           data-bs-slide="prev"
+//           onClick={handlePrev}
+//         >
+//           <span
+//             className="carousel-control-prev-icon"
+//             aria-hidden="true"
+//           ></span>
+//           <span className="visually-hidden">Previous</span>
+//         </button>
+//         <button
+//           className="carousel-control-next"
+//           type="button"
+//           data-bs-target="#carouselExampleIndicators"
+//           data-bs-slide="next"
+//           onClick={handleNext}
+//         >
+//           <span
+//             className="carousel-control-next-icon"
+//             aria-hidden="true"
+//           ></span>
+//           <span className="visually-hidden">Next</span>
+//         </button>
+//       </div>
+//     </Col>
+//   </Row>

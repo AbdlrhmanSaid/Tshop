@@ -12,6 +12,7 @@ import {
   faGear,
   faCartShopping,
   faClipboard,
+  faShop,
 } from "@fortawesome/free-solid-svg-icons";
 
 export const AppNavbar = () => {
@@ -39,6 +40,12 @@ export const AppNavbar = () => {
               </Link>
             </Nav>
             <Nav href="" className="me-3">
+              <Link to={"/Prducts"}>
+                <FontAwesomeIcon icon={faShop} className="me-1" />
+                Prducts
+              </Link>
+            </Nav>
+            <Nav href="" className="me-3">
               <Link to={"/orders"}>
                 <FontAwesomeIcon icon={faClipboard} className="me-1" />
                 My Orders
@@ -61,11 +68,16 @@ export const AppNavbar = () => {
             <Button className="signhbtn cursor-pointer text-white d-none">
               <Link to={"/SignUp"}>Sign Up</Link>
             </Button>
-            <Link to={"/Contact"}>
+            <Link to={"/Contact"} className="me-3">
               <Button className="signhbtn cursor-pointer text-white ">
                 Contact Us
               </Button>
             </Link>
+            {/* <Link to={"/Sign"}>
+              <Button className="signhbtn cursor-pointer text-white  ">
+                Sign In
+              </Button>
+            </Link> */}
           </Form>
         </Navbar.Collapse>
       </Container>

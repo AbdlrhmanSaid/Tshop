@@ -51,7 +51,7 @@ export const Viewprod = () => {
               <Card.Text>
                 <h2>{product.price}$</h2>
               </Card.Text>
-              <Link to={"/"} className="m-auto">
+              <Link to={"/Prducts"} className="m-auto">
                 <Button variant="primary">Back</Button>
               </Link>
             </Card.Body>

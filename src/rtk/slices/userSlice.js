@@ -4,7 +4,6 @@ export const userSlice = createSlice({
   name: "user",
   initialState: {
     userData: {
-      // هذه البيانات
       username: "JohnDoe",
       address: {
         city: "Alexandria",
@@ -13,6 +12,7 @@ export const userSlice = createSlice({
       },
       age: 25,
       phone: "0123456789",
+      email: "example@gmail.com",
     },
   },
   reducers: {

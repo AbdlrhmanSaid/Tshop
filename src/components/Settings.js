@@ -10,6 +10,7 @@ import {
   faPhone,
   faSave,
   faTimes,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { Button } from "react-bootstrap";
 import { selectUserData, setUserData } from "../rtk/slices/userSlice";
@@ -57,6 +58,7 @@ const SettingsPage = () => {
   const [selectedCityOption, setSelectedCityOption] = useState("");
   const [age, setAge] = useState(userData.age);
   const [phoneNumber, setPhoneNumber] = useState(userData.phone);
+  const [email, setEmail] = useState(userData.email);
 
   const handleCityChange = (city) => {
     setSelectedCity(city);
@@ -98,6 +100,7 @@ const SettingsPage = () => {
         },
         age: age,
         phone: phoneNumber,
+        email: email,
       })
     );
   };
@@ -186,6 +189,20 @@ const SettingsPage = () => {
               id="phoneNumber"
               value={phoneNumber}
               onChange={(e) => setPhoneNumber(e.target.value)}
+            />
+          </div>
+          {/* Email */}
+          <div className="form-group">
+            <label htmlFor="phoneNumber">
+              <FontAwesomeIcon icon={faEnvelope} className="me-2" />
+              Email
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
 
